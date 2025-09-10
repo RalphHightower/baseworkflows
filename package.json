@@ -1,6 +1,36 @@
 {
+  "name": "baseworkflows",
+  "description": "baseworkflows",
+  "author": {
+    "name": "Ralph Hightower",
+    "email": "ralph.hightower+baseworkflows@gmail.com",
+    "url": "https://ralphhightower.github.io/baseworkflows/"
+  },
+  "contributors": [
+    "ralph.hightower+baseworkflows@gmail.com"
+  ],
+  "version": "v1.0.4",
+  "type": "git",
+  "homepage": "https://github.com/RalphHightower/baseworkflows.git",
+  "bugs": {
+    "url": "https://github.com/RalphHightower/baseworkflows/issues",
+    "email": "ralph.hightower+blog-bugs@gmail.com"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "baseworkflows"
+  ],
   "devDependencies": {
-    "markdownlint": "^0.38.0",
-    "semantic-release": "^24.2.7"
-  }
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^11.0.5",
+    "@semantic-release/release-notes-generator": "^14.1.0",
+    "markdownlint-cli2": "^0.18.1",
+    "markdownlint-cli2-formatter-json": "^0.0.8",
+    "semantic-release": "^24.2.6"
+  },
+  "dependencies": {
+    "npm": "^11.6.0"
+  },
+  "packageManager": "npm@11.4.2"
 }
