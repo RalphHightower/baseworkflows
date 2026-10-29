@@ -1,10 +1,13 @@
-name: Create Issue to Update Year In Relevant Files
+name: newYearUpdateCopyright.yml – Create Issue to Update Year In Relevant Files
 # developer: @RalphHightower 
 on:
   schedule:
     - cron: "0 5 1 1 *" # America/New_York (UTC-5:00)
+  #workflow_dispatch:
 
-permissions: none 
+permissions: 
+  contents: read
+ 
 jobs:
   create_issue:
     name: Create issue to update copyright year
@@ -12,11 +15,6 @@ jobs:
     permissions:
       issues: write
     steps:
-      - name: Harden Runner
-        uses: step-security/harden-runner@ccd8616d44fd3846e67624a50d5aad6d37bf2d25 # v2.22.1
-        with:
-          egress-policy: audit
-
       - name: Happy New Year!
         run: |
           new_issue_url=$(gh issue create \
@@ -30,11 +28,11 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_REPO: ${{ github.repository }}
-          TITLE: Happy New  Year – Update License Year
+          TITLE: Happy New  Year! 🎆 – 🍾 Update License Year
           ASSIGNEES: RalphHightower 
-          LABELS: documentation
+          LABELS: "maintenance"
           BODY: |
-            ### New Year's Maintenance 
+            # New Year's Maintenance 
 
             - [ ] Update LICENSE. Add new year to year's span.
 
